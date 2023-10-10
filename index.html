@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web agency</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/responsive.css">
+    <!-- Récupération de la police Roboto sur google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <!-- START - header TOP-->
+    <header class="top">
+        <!--En-tête contenant le logo et la barre de naviagation-->
+        
+        <img class="logo" src="assets/logo.png" type="png" alt="Logo bleu Web agency">
+        <!-- Insertion du logo-->
+        <nav>
+            <ul class="menu">
+                <!-- Liste non ordonnée contenant des puces de lien vers un autre endroit de la page grâce aux ID-->
+                <li><a class="top" href="#accueil">Accueil</a></li>
+                <li><a class="top" href="#services">Services</a></li>
+                <li><a class="top" href="#portfolio">Portfolio</a></li>
+                <li><a class="top" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- END - header TOP-->
+
+    
+    <!-- START : Main-->
+
+    <main>
+        <!-- START - section COVER-->
+
+        <section id="accueil" class="cover">
+            <!-- START : conteneur Texte de la cover-->
+            <div class=text-cover>
+                <h1>
+                    <span class="webagency">web agency</span>
+                    <span>L'agence de tous vos projets !</span>
+                </h1>
+                <br>
+                <p class="white">Vous avez un projet ? WebAgency vous aide à le réaliser !</p>
+                <br>
+                <button class="info">Plus d'infos</button>
+            </div>
+            <!-- END : conteneur Texte de la cover-->
+
+            <!-- START : conteneur Carousel de la cover-->
+            <div class="carousel">
+                <img class="slide1" #slider-prev src="assets/bg1.jpg" type="jpg" alt="Enfant qui joue avec de la peinture" ><img class="slide2" #slider-next src="assets/bg2.jpg" type="jpg" alt="Enfant qui crie dans un mégaphone" >
+                <!-- Conteneur pour les boutons de navigation -->
+                <input type="radio" id="slider-next" name="slider" value="">
+                <input type="radio" id="slider-prev" name="slider" value="">
+                <div class="carousel-controls">
+                    <!-- Bouton pour passer à la diapositive précédente -->
+                    <div class="prev">
+                        <span  class="material-symbols-outlined">
+                            arrow_back_ios
+                        </span>
+                    </div>
+                    <!-- Bouton pour passer à la diapositive suivante -->
+                    <div class="next">
+                        <span class="material-symbols-outlined">
+                            arrow_forward_ios
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- END : conteneur Caroussel de la cover-->
+
+
+
+        </section>
+        <!-- END - Section COVER-->
+
+        <!--START : Section services -->
+        <section class="services" id="services">
+            <h2>
+                Nos services
+            </h2>
+            <div class="underline">
+                <div class="point"></div>
+            </div>
+            <div class="ss-titre" >
+                <p class="center">
+                    <span class="webagency">WebAgency</span>
+                    <span>vous accompagne de A à Z dans tous vos projets en vous proposant des solutions adaptées à vos besoins et à ceux de vos futurs visiteurs !</span>
+                </p>
+            </div>
+            <!--START Section Service : Bloc avec les 2 colonnes image et détail-->           
+            <section class="service">
+                <img class="main-feature" src="assets/main-feature.png" alt="Image d'un écran représentant un site web" type="png">
+                <!-- START Div détail contenant 3 lignes : pour chaque sous partie-->
+                <div class="detail">
+                    <!-- START Div bloc-service contenant 2 colonnes : icon et texte -->
+                    <div class="bloc-service">
+                        <!-- START Div icons -->
+                        <div class="icons">
+                            <div class="rond">
+                                <i class="fas fa-chart-line fa-2x"></i>
+                                <div class="point2"></div>
+                            </div>
+                        </div>
+                        <!-- END Div icons -->
+                        
+                        <!-- START Div detail-service contenant le texte des sous partie -->
+                        <div class="detail-service">
+                            <h3>UX design</h3>
+                            <p>
+                                <span>Le</span>
+                                <span class="bold"> "design d'éxpérience" </span>
+                                <span>prend en compte les attentes et les besoins des internautes.</span>
+                                <br>Un site bien pensé = un utilisateur fidélisé !
+                            </p>
+                        </div>
+                        <!-- END Div detail-service contenant le texte des sous partie -->
+                    </div>
+                    <!-- END Div bloc-service contenant 2 colonnes : icon et texte -->
+
+                    <!-- START Div bloc-service contenant 2 colonnes : icon et texte -->
+                    <div class="bloc-service">
+                        <!-- START Div icons -->
+                        <div class="icons">
+                            <div class="rond">
+                                <i class="fas fa-cubes fa-2x"></i>
+                                <div class="point2"></div>
+                            </div>
+                        </div>
+                        <!-- END Div icons -->
+
+                        <!-- START Div detail-service contenant le texte des sous partie -->
+                        <div class="detail-service">
+                            <h3>UI design</h3>
+                            <p>
+                                <span>Bénéficiez d'un site</span>
+                                <span class="bold"> responsive design </span>
+                                <span>adapté pour tous les supports:</span>
+                                <span class="bold"> tablette, smartphone, ordinateur.</span>
+                            </p>
+                        </div>
+                        <!-- END Div detail-service contenant le texte des sous partie -->
+                    </div>
+                    <!-- END Div bloc-service contenant 2 colonnes : icon et texte -->
+
+                    <!-- START Div bloc-service contenant 2 colonnes : icon et texte -->
+                    <div class="bloc-service">
+                        <!-- START Div icons -->
+                        <div class="icons">
+                            <div class="rond">
+                                <i class="fas fa-chart-pie fa-2x"></i>
+                                <div class="point2"></div>
+                            </div>
+                        </div>
+                        <!-- END Div icons -->
+
+                        <!-- START Div detail-service contenant le texte des sous partie -->
+                        <div class="detail-service">        
+                            <h3>SEO</h3>
+                            <p>
+                                <span>Avec</span>
+                                <span class="webagency"> WebAgency </span>
+                                <span class="bold">, améliorez la visibilité de votre site</span>
+                                <span> naturellement en étant</span>
+                                <span class="bold">référencé</span>
+                                <span>dans les premières positions des moteurs de recherches !</span>
+                            </p>
+                        </div>
+                        <!-- END Div detail-service contenant le texte des sous partie -->
+                    </div>
+                    <!-- END Div bloc-service contenant 2 colonnes : icon et texte -->
+                </div>
+                <!-- START Div détail contenant 3 lignes : pour chaque sous partie-->
+            </section>
+            <!--END Section Service-->
+        </section>
+        <!--END : Section services -->
+
+        <!--START : Projets id=portfolio -->
+        <section class="portfolio" id="portfolio">
+            <h2>
+                Nos projets
+            </h2>
+            <div class="underline">
+                <div class="point"></div>
+            </div>
+            <div class="ss-titre center" >
+                <p >
+                    <span> Ils sont déjà des centaines à nous avoir fait confiance.</span>
+                    <br>
+                    <span>Venez découvrir </span><span class="bold">nos réalisations !</span>
+                </p>
+            </div>
+
+            <!-- START - Navigation -->
+            <nav class="nav-folio">
+                <ul class="btn-folio">
+                    <li class="works">All Works</li>
+                    <li class="creative">Creative</li>
+                    <li class="corporate">Corporate</li>
+                    <li class="portfolio">Portfolio</li>
+                </ul>
+            </nav>
+            <!-- END - Navigation -->
+            <!--START : Classe FOLIO contenant les figures et figcaption-->
+            <div class="folio" >
+                <figure class="overlay-image">
+                    <img 
+                        class="image"
+                        src="assets/portfolio/01.jpg" 
+                        type="jpg" 
+                        alt="image de lunettes et nez">
+                    <div class="normal"></div>
+                    <div class="hover">
+                        <figcaption>
+                            <a href="#" class="nom-projet">
+                                <span class="bold">Portfolio item 1</span>
+                                <spans>Lorem ipsum dolor sit amet</spans>
+                                <div class="rond2">
+                                    <i class="far fa-eye fa-xs"></i>
+                                </div>
+                            </a>
+                        </figcaption>
+                    </div>
+                </figure>
+                <figure class="overlay-image">
+                    <img 
+                        class="image"
+                        src="assets/portfolio/02.jpg" 
+                        type="jpg" 
+                        alt="image de lunettes et nez">
+                    <div class="normal"></div>
+                    <div class="hover">
+                        <figcaption>
+                            <a href="#" class="nom-projet">
+                                <span class="bold">Portfolio item 2</span>
+                                <spans>Lorem ipsum dolor sit amet</spans>
+                                <div class="rond2">
+                                    <i class="far fa-eye fa-xs"></i>
+                                </div>
+                            </a>
+                        </figcaption>
+                    </div>
+                </figure>
+                <figure class="overlay-image">
+                    <img 
+                        class="image"
+                        src="assets/portfolio/03.jpg" 
+                        type="jpg" 
+                        alt="image de lunettes et nez">
+                    <div class="normal"></div>
+                    <div class="hover">
+                        <figcaption>
+                            <a href="#" class="nom-projet">
+                                <span class="bold">Portfolio item 3</span>
+                                <spans>Lorem ipsum dolor sit amet</spans>
+                                <div class="rond2">
+                                    <i class="far fa-eye fa-xs"></i>
+                                </div>
+                            </a>
+                        </figcaption>
+                    </div>
+                </figure>
+                <figure class="overlay-image">
+                    <img 
+                        class="image"
+                        src="assets/portfolio/04.jpg" 
+                        type="jpg" 
+                        alt="image de lunettes et nez">
+                    <div class="normal"></div>
+                    <div class="hover">
+                        <figcaption>
+                            <a href="#" class="nom-projet">
+                                <span class="bold">Portfolio item 4</span>
+                                <spans>Lorem ipsum dolor sit amet</spans>
+                                <div class="rond2">
+                                    <i class="far fa-eye fa-xs"></i>
+                                </div>
+                            </a>
+                        </figcaption>
+                    </div>
+                </figure>
+            </div>
+            <div class="folio" >
+                <figure class="overlay-image">
+                    <img 
+                        class="image"
+                        src="assets/portfolio/05.jpg" 
+                        type="jpg" 
+                        alt="image de lunettes et nez">
+                    <div class="normal"></div>
+                    <div class="hover">
+                        <figcaption>
+                            <a href="#" class="nom-projet">
+                                <span class="bold">Portfolio item 5</span>
+                                <spans>Lorem ipsum dolor sit amet</spans>
+                                <div class="rond2">
+                                    <i class="far fa-eye fa-xs"></i>
+                                </div>
+                            </a>
+                        </figcaption>
+                    </div>
+                </figure>
+                <figure class="overlay-image">
+                    <img 
+                        class="image"
+                        src="assets/portfolio/06.jpg" 
+                        type="jpg" 
+                        alt="image de lunettes et nez">
+                    <div class="normal"></div>
+                    <div class="hover">
+                        <figcaption>
+                            <a href="#" class="nom-projet">
+                                <span class="bold">Portfolio item 6</span>
+                                <spans>Lorem ipsum dolor sit amet</spans>
+                                <div class="rond2">
+                                    <i class="far fa-eye fa-xs"></i>
+                                </div>
+                            </a>
+                        </figcaption>
+                    </div>
+                </figure>
+                <figure class="overlay-image">
+                    <img 
+                        class="image"
+                        src="assets/portfolio/07.jpg" 
+                        type="jpg" 
+                        alt="image de lunettes et nez">
+                    <div class="normal"></div>
+                    <div class="hover">
+                        <figcaption>
+                            <a href="#" class="nom-projet">
+                                <span class="bold">Portfolio item 7</span>
+                                <spans>Lorem ipsum dolor sit amet</spans>
+                                <div class="rond2">
+                                    <i class="far fa-eye fa-xs"></i>
+                                </div>
+                            </a>
+                        </figcaption>
+                    </div>
+                </figure>
+                <figure class="overlay-image">
+                    <img 
+                        class="image"
+                        src="assets/portfolio/08.jpg" 
+                        type="jpg" 
+                        alt="image de lunettes et nez">
+                    <div class="normal"></div>
+                    <div class="hover">
+                        <figcaption>
+                            <a href="#" class="nom-projet">
+                                <span class="bold">Portfolio item 8</span>
+                                <spans>Lorem ipsum dolor sit amet</spans>
+                                <div class="rond2">
+                                    <i class="far fa-eye fa-xs"></i>
+                                </div>
+                            </a>
+                        </figcaption>
+                    </div>
+                </figure>
+            </div>
+            <!--END : Classe FOLIO contenant les figures et figcaption-->
+        </section>
+        <!--END : Projets id=portfolio -->
+
+        <!--START : Contact-->
+        <section id="contact" class="contact">
+
+            <!-- START : Intégration d'une carte google map-->
+            <div class="formulaire">
+                <form method="post" traitement="php" name="contact">
+                    <h3>Contact Info</h3>
+                    <p>
+                        <span class="bold">WebAgency SAS </span>
+                        <br>
+                        <span>25 rue d'Hauteville 75010 Paris <br>
+                        Tel : 01 02 03 04 05
+                        </span>
+                    </p>
+                    <input type="text" name="Lastname" id="name" placeholder="Nom" required>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                    <input type="text" name="object" id="object" placeholder="Objet" required>
+                    <textarea id="msg" name="message" >Message</textarea>
+                    <input type="submit" name="envoyer" id="envoyer" value="Envoyer">                    
+                </form> 
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2624.173246422819!2d2.347986476872493!3d48.87397379960927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1695802742277!5m2!1sfr!2sfr" 
+            width="2000" 
+            height="800" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+            <!-- Fin : Intégration d'une carte google map-->
+            <!-- Filtre bleu sur la carte google map-->
+            <div class="filtre-bleu"> </div>
+            <br>
+
+        </section>
+
+        <!--END : Contact-->
+    </main>
+    <!--END - Main-->
+    <footer>
+        <p><span>
+            WebAgency SAS- © Site réalisé par Eloïse Galland - 
+            <a href="rgpd.html">Mentions légales</a>
+        </span>
+    </p>
+    </footer>
+
+    <!--START Footer -->
+
+</body>
+</html>
