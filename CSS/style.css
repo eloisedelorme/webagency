@@ -1,0 +1,653 @@
+/* Mise à 0 de la mise en page navigateur */
+* {
+    margin : 0px;
+    padding: 0px ;
+    font-family: 'Roboto', sans-serif;
+    list-style-type: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+/* Titres, sous-titres et classes spécifiques de texte */
+
+h1, h2, h3 {
+    font-family:'Roboto', sans-serif;
+    font-weight : 700;
+}
+
+h2 , h3 {
+    color : #272727;
+}
+
+h1, h2 {
+    font-size : 2.5rem ;
+}
+
+h1 {
+    text-transform: uppercase;
+    color : #fff ;
+    padding: 2px;
+}
+
+
+h2 {
+    text-align: center;
+    text-transform: uppercase ;
+    padding: 20px ;
+}
+
+
+/* Trait et point situé sous le titre h2 */ 
+
+.point, .underline {
+    margin-top : 15px
+}
+
+.underline {
+    width:10%;
+    height: 8px;
+    margin : auto ;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.point {
+    width: 15px;
+    height: 15px;
+    margin: auto;
+    border-radius: 50%;
+    background-color: #5cadd3;
+    box-sizing: border-box;
+}
+
+/* Sous-titre situé sous chaque titre h2 de section */
+
+.ss-titre {
+    position : relative ;
+    display: flex;
+    flex-wrap : wrap ;
+    padding-top : 28px ;
+    padding-bottom: 28px ;
+    justify-content: center;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+/* Classe pour le nom d'entreprise web agency le passant en bleu et en gras */
+.webagency {
+    color : #5cadd3 ;
+    font-weight: 700;
+}
+
+/* Passage du texte en blanc */
+.white {
+    color : #FFF ;
+}
+/* Mise en gras d'une partie du texte dans les paragraphes */
+.bold {
+    font-weight: bold ;
+}
+
+/* Classe pour centrer */ 
+.center {
+    text-align: center;
+}
+
+
+/* Mise en page de l'en-tête contenant le logo et la navigation */
+header {
+    display : flex ;
+    flex-direction: row;
+    flex-wrap : wrap ;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0px 30px 0px 30px;
+    background-color: #FFF;
+    height : 100px;
+    position: fixed;
+    z-index: 6;
+}
+
+
+.logo{
+    max-height : 57px ;
+    max-width: 261px ;
+    margin : 0px  0px 0px 10%;
+}
+
+header > nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10%;
+    overflow: hidden;
+    height: 100%;
+    background-color: #FFF;
+}
+
+
+ul.menu {
+    display: inline-flex ;
+    padding : 30px ;
+    flex-direction: row ;
+    flex-wrap: wrap;
+}
+
+a.top {
+    display: flex;
+    justify-content: center;
+    color :  #646464  ;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    flex-wrap : wrap ;
+    margin : 0px 10px 0px 5px;
+    padding: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size : 16px;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: content-box;
+    justify-content: center;
+}
+
+/*Trait bleu au dessus des liens lorsque la souris passe dessus */
+a.top:hover {
+    border-top: solid 2px #3498db;
+}
+
+/* Mise en forme du main */
+main {
+    position : relative ;
+    display: flex;
+    flex-direction: column;
+    overflow : auto ;
+    overflow-x: hidden;
+}
+
+/* Paramétrage du caroussel */
+
+.cover {  
+    display: flex;
+    gap: 0px 0px;
+    position: relative;
+    padding-top : 5rem ;
+    padding-bottom: 15rem;
+}
+
+.text-cover { 
+    padding:10% 50% 0% 10% ;
+    position: relative;
+    background-color: none;
+    z-index: 3;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif ;  
+}
+
+button.info {
+    padding: 10px 20px 10px 20px ;
+    background-color: #5cadd3;
+    color: #FFF;
+    font-size: 16px ;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    border-color: #5cadd3;
+    border-bottom:  1px solid #3498db;
+    border-radius: 7%;
+    box-shadow: 0 2px 1px 0 #4494bb;
+}
+
+
+.carousel{
+    flex-direction: row;
+    position: absolute;
+    z-index: 1 ;
+    width: 200%;
+    flex-direction: row;
+}
+
+.slide1 { 
+    position: relative;
+    width: 50%;
+    height: auto;
+    z-index: 1;
+}
+
+.slide2 { 
+    position: relative;
+    width: 50% ;
+    z-index: 1;
+}
+
+.slide1 , .slide2 {
+    animation: translate 24s infinite linear ;
+}
+
+@keyframes translate {
+    0% {
+        transform: translateX(0);
+    }
+
+    10% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translate(-100%);
+    }
+
+    60%{
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+
+}
+
+.caroussel-controls {
+    position: inherit;
+    overflow: hidden;
+}
+
+/*Boutons de navigation du caroussel */
+.prev, .next {
+    position: absolute;
+    z-index: 4;
+    color: #FFF;
+    border-radius: 100%;
+    background-color: rgba(7, 1, 4, 0.48) ;
+    padding: 1%;
+    top : 40% ;
+    overflow: hidden;
+
+}
+
+.prev {
+    left : 2%;
+}
+.next {
+    right : 50% ;
+}
+
+
+#slider-next , #slider-prev {
+    position: absolute;
+    left : 47%;
+    top : 40% ;
+    z-index: 5;
+    width: 100px; 
+    height: 100px;
+    opacity: 0;
+    overflow: hidden;
+}
+
+#slider-next {
+    left : 2%;
+}
+
+#slider-prev {
+    right: 47%;
+}
+
+
+/* Section services */
+
+.services {
+    padding-top : 10% ;
+    padding-bottom: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+/* Section service */
+.service {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position : relative ;
+    align-items: center;
+    justify-content: center;
+}
+/*Image de la section service */
+.main-feature {
+    justify-content: center;
+    object-fit: contain;
+    min-width: 510px;
+}
+
+
+
+
+/* .bloc-service : contenant l'icone, le titre h3 et le texte */
+
+.bloc-service {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height : 120px ;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    color: #5cadd3;
+    overflow: hidden;
+    width : 100px;
+}
+
+.detail {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap : wrap;
+} 
+
+/*Rotation de l'icone à 360° dans le sens inverse de celle du rond pour donner
+ l'impression qu'elle est statique : icone enfant de .rond */
+
+.rond > i {
+    animation: rotation2 6s infinite linear;
+}
+
+@keyframes rotation2 {
+    from {
+        transform: rotate(359deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+/* Rond contenant l'icone et le point. Rotation à 360° et @keyframes poue l'animation*/
+.rond {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    margin-top: 40px;
+    margin-right: 20px;
+    border: 1px solid #e1e1e1;
+    border-radius: 50%;
+    animation : rotation 6s infinite linear ;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+    /* Point situé dans le rond */
+.point2 {
+    position: absolute;
+    left: 58px;
+    width: 10px;
+    height: 10px;
+    margin: auto 0;
+    border-radius: 50%;
+    background-color: #5cadd3;
+}
+
+/* Texte de la section service */
+
+.detail-service {
+    width: 400px;
+    margin-top: 20px;
+}
+
+/* START - Section projets avec figures et figcaption (légendes) */
+
+/* START boutons de navigations portfolio*/
+.portfolio {
+    background-color: #f5f5f5 ;
+    padding-top : 5% ;
+    padding-bottom: 5%;
+    border-radius: 0 5px 5px 0;
+}
+
+.nav-folio {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-folio {
+    display: flex ;
+    flex-direction: row ;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.btn-folio > li {
+    padding : 10px;
+    background-color: #ccc ;
+    padding: 15px;
+    font-family: 'Roboto' , sans-serif;
+    font-size: 14.4px;
+    color :#646464 ;
+    font-weight: 700 ;
+}
+
+.btn-folio > li:active {
+    padding : 10px;
+    background-color: #4494bb ;
+    padding: 15px;
+    font-family: 'Roboto' , sans-serif;
+    font-size: 14.4px;
+    color :#FFF ;
+    font-weight: 700 ;
+}
+
+.works {
+    border-radius: 5px 0 0 5px;
+}
+
+
+/* END boutons de navigations portfolio*/
+
+/*START Images du port folio */
+.folio {
+    display: flex;
+    flex-direction: row;
+    justify-content: center ;
+    width : 100% ;
+    margin : 0 auto ;
+    flex-wrap: wrap;
+}
+
+.overlay-image {
+    display: flex ;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 10px;
+    width : 250px ;
+    height: 150px ;
+}
+
+figure > img {
+    width : 250px;
+    z-index: 1;
+}
+
+
+/* Overlay */
+.overlay-image .hover {
+    position: absolute;
+    display: flex ;
+    justify-content: end;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0,0,0,.3) ;
+    color : #FFF ;
+    align-items: end;
+    height: 60px;
+    z-index: 3;
+    }
+
+figcaption > a {
+    outline: none;
+    text-decoration: none;
+    color : #FFF ;
+}
+   /* Apparition overlay sur passage souris */
+.overlay-image:hover .hover {
+    opacity: 1;
+    justify-content: end;
+}
+
+.rond2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position : absolute ;
+    z-index: 4;
+    width: 30px;
+    height: 30px;
+    background-color: #4494bb ;
+    border-radius: 50%;
+    border : 2px solid #FFF;
+    top : -35% ;
+    left : 85%;
+
+}
+
+.rond2 > i {
+    color: #FFF;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/* ENd - Images du portfolio */
+
+/* END- Section projets avec figures et figcaption (légendes) */
+
+/* START - section contact */
+
+.contact {
+    display: flex;
+    position : relative ;
+    justify-content: right;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Elément 1 section contact : map google */
+iframe {
+    position: relative;
+    z-index : 1;
+    width: 100%;
+    overflow: hidden;
+}
+
+/*Elément 2 de la section contact : filtre bleu */
+.filtre-bleu {
+    position: absolute ;
+    height: 800px;
+    width: 100% ;
+    background-color: #3498db;
+    opacity: 50%;
+    z-index : 2;
+    justify-content : flex-start;
+    overflow: hidden;
+}
+
+/*Elément 3 de la csection contact : Conteneur du formulaire incluant l'adresse et le formulaire */
+.formulaire {
+    position: absolute;
+    z-index: 3;
+    background-color: rgba(255, 255, 255, 0.8);
+    width : 300px ;
+    margin-top: 2%;
+    margin-right: 5%;
+    margin-bottom: 450px;
+    justify-content: right;
+}
+
+/* formulaire*/
+form {
+    padding: 20px;
+}
+
+
+form p {
+    color: #444444;
+    font-size: 0.9em;
+    margin-top: 2%;
+    font-family: 'Roboto' ,sans-serif;
+}
+
+/* Toutes les zones du formulaire */
+#name, #email, #object, textarea {
+    display: flex;
+    justify-content: center ;
+    align-content: center;
+    margin-top: 5px;
+    font-size: 0.8em;
+    font-family: 'Roboto' ,sans-serif;
+    color: #999;
+    padding-left: 4px;
+    border : 1px solid #ccc ;
+    width: 250px;
+}
+
+#name, #email, #object {
+    height: 20px;
+}
+
+/* Zone du message */
+
+textarea {
+    resize: none;
+    height: 200px;
+}
+
+/*bouton du formulaire de contact */
+#envoyer {
+    margin-top: 15px;
+    background-color: #5cadd3;
+    color: #FFF;
+    font-size: 12px ;
+    border-radius: 5%;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    width: 40%;
+    border: 1px solid #5cadd3;
+    height : 30px ;
+    box-shadow: 0 2px 1px 0 #4494bb;
+    font-weight: 700;
+}
+
+/* END 0- section contact */
+
+/* Début Footer */
+
+footer {
+    display: flex;
+    position: relative ;
+    width: 100%;
+    height: 100px;
+    background-color: #ccc;
+    bottom : 0 ;
+    margin-top: 5px;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto' , sans-serif;
+    font-weight: bold;
+}

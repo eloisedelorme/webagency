@@ -1,0 +1,112 @@
+@media screen and (max-width: 738px) {
+    /*Suppression des animations */
+    .slide1 , .slide2 {
+        animation: none ;
+    }
+    .rond > i {
+        animation: none;
+    }
+
+    .rond {
+        animation : none ;
+    }
+
+    .logo {
+        max-width: 200px;
+        padding: 0;
+        margin: 0;
+    }
+
+    * {
+        overflow-x: hidden;
+    }
+    header {
+        position: relative;
+        height: auto;
+        flex-direction: column;
+    }
+
+    ul.menu { 
+        display : flex ;
+        flex-direction: column;
+        margin : 0;
+        align-items: center;
+        justify-content: center;
+    }
+    a.top {
+        padding : 1px;
+        font-size: 30px;
+
+    }
+
+    main {
+        margin-top: 60px;
+    }
+    /*Modification de la couverture pour n'afficher que la première image */
+    .slide1 {
+        height: 300px;
+        width: auto;
+    }
+    .slide2 {
+        visibility: hidden;
+    }
+
+    .text-cover {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap ;
+    }
+
+    h1, h2, h3, p {
+        flex-wrap: wrap;
+    }
+    h2, h3, {
+        display: flex;
+            text-align: center;
+            align-items : center ;
+            justify-content : center ;
+    }
+    /*masquage des boutons prev next */
+    .prev, .next {
+        visibility: hidden;
+    }
+
+    .services {
+        padding-top : 10% ;
+        padding-bottom: 10%;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    /*Modification du bloc service pour afficher les textes avec retour auto à la ligne*/
+    .bloc-service {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height : 300px ;
+        flex-wrap: wrap;
+    }
+
+    .icons {
+        align-items: start;
+    }
+
+    
+    .detail-service {
+        display: flex;
+        text-align: center;
+        flex-wrap : wrap  ;
+        width: auto;
+        font-size: 20px;
+        justify-content: center;
+    }
+
+    /*Centrage de tous les paragraphes et passage à 20px poour plus de lisibilité */
+    p {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 20px;
+    }
+}
